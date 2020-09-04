@@ -14,36 +14,27 @@ choices = {
     "7a": "Australian location",
     "7b": "American location",
     "7c": "Invalid location",
-    "8a": "Invalid name",
-    "8b": "Valid name",
-    "8c": "No name",
-    "9a": "Invalid email",
-    "9b": "Valid email",
-    "9c": "No email",
-    "10a": "Invalid phone",
-    "10b": "Valid phone",
-    "10c": "No phone",
-    "11a": "Description included",
-    "11b": "No description"
+    "8a": "Invalid email",
+    "8b": "Valid email",
+    "8c": "No email",
+    "9a": "Description included",
+    "9b": "No description"
 }
 
 res = '''
-1a 2a 3a 4b 5a 6b 7c 8a 9b 10b 11b
-1b 2b 3b 4a 5b 6a 7a 8b 9a 10a 11a
-1a 2a 3b 4a 5b 6b 7b 8c 9c 10c 11b
-1b 2a 3a 4b 5a 6a 7a 8c 9c 10c 11a
-1a 2b 3a 4b 5a 6b 7b 8b 9a 10a 11b
-1b 2b 3b 4a 5b 6a 7c 8a 9b 10b 11a
-1a 2a 3b 4b 5b 6b 7a 8b 9a 10b 11a
-1b 2b 3b 4a 5a 6a 7b 8a 9c 10c 11b
-1b 2b 3a 4a 5b 6b 7c 8c 9a 10c 11a
-1a 2b 3b 4a 5a 6a 7b 8b 9b 10c 11a
-1a 2a 3a 4b 5a 6b 7c 8b 9c 10a 11a
-1a 2b 3a 4a 5b 6a 7a 8a 9b 10a 11b
-1b 2a 3a 4b 5a 6a 7b 8c 9b 10b 11b
-1b 2b 3b 4b 5a 6b 7c 8a 9a 10a 11a
-1a 2b 3b 4b 5a 6b 7c 8c 9c 10a 11b
-1b 2a 3b 4a 5b 6b 7a 8a 9c 10b 11b
+1a 2a 3b 4a 5b 6a 7b 8a 9b
+1b 2b 3a 4b 5a 6b 7a 8b 9a
+1b 2a 3a 4b 5b 6a 7c 8c 9b
+1a 2b 3b 4a 5a 6b 7c 8c 9a
+1a 2b 3b 4b 5b 6a 7a 8b 9b
+1b 2a 3a 4b 5a 6b 7b 8a 9a
+1b 2a 3a 4a 5b 6b 7a 8b 9b
+1b 2b 3b 4a 5a 6a 7b 8c 9a
+1a 2b 3a 4b 5a 6a 7c 8a 9b
+1b 2b 3b 4a 5b 6b 7a 8c 9a
+1b 2a 3b 4a 5b 6b 7c 8b 9a
+1b 2a 3b 4a 5a 6a 7a 8a 9a
+1b 2a 3a 4b 5a 6a 7b 8b 9b
 '''
 
 res = [line.split() for line in res.split('\n') if line]
