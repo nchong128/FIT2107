@@ -1,4 +1,5 @@
-from unittest import unittest, mock
+from unittest import mock
+import unittest
 from w7 import PriorityQueue
 
 class TestPriorityQueue(unittest.TestCase):
@@ -61,15 +62,17 @@ class TestPriorityQueue(unittest.TestCase):
         self.assertEqual(peep, 2)
         self.assertEqual(len(self.myQueue.queue), 5)
 
-    def test_tojson(self):
-        m = mock.Mock()
-        
-        
+    @mock.patch('json.dumps', autospec=True)
+    def test_tojson(self, mock_json):    
         self.myQueue.add(1,1)
         self.myQueue.add(2,2)
         self.myQueue.add(3,3)
         self.myQueue.add(4,4)
         self.myQueue.add(5,5)
+        
+        json_val = self.myQueue.tojson()
+        mock_json.assert_called_with([(1,1),(2,2),(3,3),(4,4),(5,5)])
+
 
 
 
