@@ -15,6 +15,3 @@ def binsearch(mylist, key):
         return left
     else:
         raise Exception
-
-
-
